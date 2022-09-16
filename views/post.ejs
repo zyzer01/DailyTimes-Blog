@@ -1,0 +1,29 @@
+<%- include("header"); -%>
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-4 mx-auto">
+    <div class="flex flex-wrap m-4">
+      <div class="p-12 md:w-full flex flex-col items-center">
+        <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"><%=title%></h2>
+        <p class="leading-relaxed text-center mb-8"><%=content%></p>
+        <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+          <span class="flex py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest"><%= tag %></span>
+          <span class="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+            <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg> 1.2k
+          </span>
+          <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>            
+            <%= date %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("footer"); -%>

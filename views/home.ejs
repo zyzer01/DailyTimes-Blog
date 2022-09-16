@@ -1,0 +1,47 @@
+
+<%- include("header"); -%>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-16 mx-auto">
+    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+      <p class="leading-relaxed text-lg">This blog project was made with NodeJS (express), EJS, TailwindCSS and MongoDB. If you like this project, please consider <span class="text-indigo-600"><a href="https://www.buymeacoffee.com/zyzer">buying me a coffee</a></span></p>
+      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+      
+      <div class="flex justify-center">
+       <a href="https://github.com/Zyzer01/Blog-v2" target="_blank"> <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Github</button> </a>
+       <a href="https://twitter.com/zyzer01" target="_blank"> <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Twitter</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <%  posts.forEach(function(post){ %>
+    <div class="-my-8 divide-y-2 divide-gray-100">
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <span class="font-semibold title-font text-gray-700"><%= post.tag %></span>
+          <span class="mt-1 mb-2 text-gray-500 text-sm"><%= date %></span>
+          <form action="/delete" method="post">
+            <button class="text-red-500" name="post" value="<%= post._id %>">Delete Post</button>
+          </form>
+        </div>
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2"><%=post.title%></h2>
+          <p class="leading-relaxed"><%=post.content.substring(0, 200) + "..."%></p>
+          <a href="/<%=post.title%>" class="text-indigo-500 inline-flex items-center mt-4">Read More
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+
+<%- include("footer"); -%>
