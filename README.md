@@ -1,6 +1,6 @@
 # Daily Times - BLOG
 
-A simple blog that allows you create, delete and read posts
+A simple blog that allows you create, delete and read posts via route parameters
 
 ## Prerequisites
 
