@@ -1,6 +1,6 @@
 # Daily Times - BLOG
 
-An app that give the current weather data  in any city of the world
+Blog that allows you create, delete and read posts
 
 ## Prerequisites
 
@@ -27,6 +27,21 @@ Install body-parser.
 
 ```bash
 npm install body-parser
+```
+Install mongoose
+
+```bash
+npm install mongoose
+```
+Install mongoose
+
+```bash
+npm install mongoose
+```
+Compile TailwindCSS
+
+```bash
+npm run watch-css
 ```
 
 ## Run App
