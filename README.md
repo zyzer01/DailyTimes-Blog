@@ -42,5 +42,7 @@ npm run watch-css
 
 ## Run App
 
+```bash
 node app.js
+```
 
