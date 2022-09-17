@@ -33,11 +33,7 @@ Install mongoose
 ```bash
 npm install mongoose
 ```
-Install mongoose
 
-```bash
-npm install mongoose
-```
 Compile TailwindCSS
 
 ```bash
