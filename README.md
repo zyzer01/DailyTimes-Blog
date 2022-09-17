@@ -1,6 +1,6 @@
 # Daily Times - BLOG
 
-Blog that allows you create, delete and read posts
+A simple blog that allows you create, delete and read posts
 
 ## Prerequisites
 
