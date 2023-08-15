@@ -26,3 +26,50 @@ const FormData = mongoose.model('FormData', formDataSchema);
 module.exports = FormData;
 
 
+
+
+// controllers/formController.js
+const FormData = require('../models/formData');
+
+async function createFormData(req, res) {
+  try {
+    const formData = new FormData(req.body);
+    await formData.save();
+    res.status(201).json({ message: 'Form data saved successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred' });
+  }
+}
+
+module.exports = { createFormData };
+
+
+
+// Your React component
+const handleSubmit = async (formData) => {
+  try {
+    const response = await fetch('/api/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+    // Handle response as needed
+  } catch (error) {
+    console.error('Error submitting form:', error);
+  }
+};
+
+
+// pages/api/submit-form.js
+import axios from 'axios';
+
+export default async function handler(req, res) {
+  try {
+    const response = await axios.post('/api/submit-form', req.body);
+    res.status(response.status).json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred' });
+  }
+}
