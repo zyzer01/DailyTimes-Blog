@@ -10,3 +10,19 @@ const { createFormData } = require('../controllers/formController');
 router.post('/submit-form', createFormData);
 
 module.exports = router;
+
+// models/formData.js
+const mongoose = require('mongoose');
+
+const formDataSchema = new mongoose.Schema({
+  // Define schema fields based on your form data
+  field1: String,
+  field2: Number,
+  // ...
+});
+
+const FormData = mongoose.model('FormData', formDataSchema);
+
+module.exports = FormData;
+
+
