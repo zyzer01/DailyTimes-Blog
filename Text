@@ -73,3 +73,5 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'An error occurred' });
   }
 }
+
+- error either NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY env variables or supabaseUrl and supabaseKey are required!
