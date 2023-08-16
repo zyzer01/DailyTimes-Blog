@@ -75,4 +75,4 @@ export default async function handler(req, res) {
 }
 
 
-http://localhost:3000/auth/callback?code=edc20fba-63f8-47dd-b768-ea6c26ad057d
+http://localhost:3000/auth/callback?code=aaca272f-6898-4591-aa7a-ebf791ac4126
