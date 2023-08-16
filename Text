@@ -74,5 +74,5 @@ export default async function handler(req, res) {
   }
 }
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+http://localhost:3000/auth/callback?code=edc20fba-63f8-47dd-b768-ea6c26ad057d
